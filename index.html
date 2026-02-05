@@ -160,7 +160,7 @@
             font-size: clamp(1.2rem, 2.5vw, 1.8rem);
             color: var(--color-text-dim);
             margin-bottom: 2.5rem;
-            max-width: 700px;
+            max-width: 900px;
             opacity: 0;
             animation: fadeIn 0.8s ease-out 0.6s forwards;
         }
@@ -307,6 +307,15 @@
             position: relative;
             margin-bottom: 4rem;
             padding-left: 2rem;
+        }
+        .publication-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .publication-title a:hover {
+            text-decoration: underline;
+    /* or add a subtle effect like: opacity: 0.8; */
         }
 
         .experience-item::before {
@@ -660,9 +669,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-tag">AI/ML ENGINEER & COMPUTER SCIENTIST</div>
-                <h1>Mahek<br>Viradiya</h1>
-                <p class="hero-subtitle">Master's student at NC State specializing in deep learning, computer vision, and real-time systems. Building intelligent solutions from lunar navigation to voice synthesis.</p>
+                <div class="hero-tag">Machine Learning Engineer | Applied AI Systems</div>
+                <h1>Mahek Viradiya</h1>
+                <p class="hero-subtitle" style="text-align: justify;">Master's student of Computer Science at NC State University, with focus on Data Science. My work ranges from AI-based lunar navigation at ISRO to building intelligent perception and voice systems. I enjoy turning advanced research into practical, real-world technologies that make a meaningful impact. .</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <a href="#projects" class="btn btn-secondary">View Projects</a>
@@ -681,8 +690,8 @@
             <div class="about-grid">
                 <div class="about-content scroll-reveal">
                     <h3>From Bronze Medalist to AI Pioneer</h3>
-                    <p>Currently pursuing my Master's in Computer Science at North Carolina State University with a stellar 3.9 GPA, I bring a unique blend of academic excellence and hands-on innovation.</p>
-                    <p>My journey began with earning a Bronze Medal in BTech Computer Engineering (9.62/10 GPA), and has evolved into groundbreaking work at ISRO, where I reduced positioning errors by 56% using pseudolite technology and LiDAR-based SLAM for lunar navigation.</p>
+                    <p>Currently pursuing my Master's in Computer Science at North Carolina State University with a 3.9 GPA, I bring a unique blend of academic excellence and hands-on innovation.</p>
+                    <p>I earned Bronze Medal during my Bacelor's in Computer Engineering (9.62/10 GPA), and has evolved into groundbreaking work at ISRO, where I reduced positioning errors by 56% using pseudolite technology and LiDAR-based SLAM for lunar navigation.</p>
                     <p>I thrive at the intersection of theory and application, transforming complex AI/ML concepts into production-ready solutions that solve real-world challenges.</p>
                 </div>
                 <div class="stats-grid scroll-reveal">
@@ -698,10 +707,10 @@
                         <div class="stat-number">99.57%</div>
                         <div class="stat-label">ML Model Accuracy</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Published Papers</div>
-                    </div>
+                    <a href="#publications" class="stat-card">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Published Papers</div>
+</a>
                 </div>
             </div>
         </div>
@@ -866,7 +875,7 @@
                 </div>
 
                 <div class="skill-category scroll-reveal">
-                    <h3>🤖 ML & Data Science</h3>
+                    <h3>🤖 Machine Learning & AI Systems</h3>
                     <div class="skill-list">
                         <span class="skill-item">PyTorch</span>
                         <span class="skill-item">TensorFlow</span>
@@ -913,59 +922,83 @@
 
     <!-- Publications Section -->
     <div class="publications-list">
+        <section id ="publications"> 
+        <h2 class="section-title">Publications</h2>
 
-    <div class="publication-card scroll-reveal">
-        <h3 class="publication-title">
+   <div class="publication-card scroll-reveal">
+    <h3 class="publication-title">
+        <a href="https://doi.org/10.1007/978-981-96-7496-1_37" 
+           target="_blank" 
+           rel="noopener noreferrer">
             Machine Learning Models for Soil Moisture Estimation Using Spectrometry
-        </h3>
-        <div class="publication-date">October 2025</div>
-        <p class="publication-description">
-            Research on spectrometry-based machine learning approaches achieving 99.57% accuracy
-            in soil moisture detection using SVM and 1D-CNN techniques.
-        </p>
-        <a class="publication-link" 
-           href="https://doi.org/10.1007/978-981-96-7496-1_37" 
+        </a>
+    </h3>
+    <div class="publication-date">October 2025</div>
+    <p class="publication-description">
+        Research on spectrometry-based machine learning approaches achieving 99.57% accuracy
+        in soil moisture detection using SVM and 1D-CNN techniques.
+    </p>
+</div>
+<div class="publication-card scroll-reveal">
+    <h3 class="publication-title">
+        <a href="https://doi.org/10.1007/978-981-97-8602-2_32" 
            target="_blank" 
            rel="noopener noreferrer">
-            View Publication →
-        </a>
-    </div>
-
-    <div class="publication-card scroll-reveal">
-        <h3 class="publication-title">
             Real-Time Object Detection and Recognition on Jetson Nano
-        </h3>
-        <div class="publication-date">March 2025</div>
-        <p class="publication-description">
-            Implementation of GPU-accelerated YOLOv8 models achieving 97% detection confidence
-            for smart home and surveillance applications with accessibility features.
-        </p>
-        <a class="publication-link" 
-           href="https://doi.org/10.1007/978-981-97-8602-2_32" 
+        </a>
+    </h3>
+    <div class="publication-date">March 2025</div>
+    <p class="publication-description">
+        Implementation of GPU-accelerated YOLOv8 models achieving 97% detection confidence
+        for smart home and surveillance applications with accessibility features.
+    </p>
+</div>
+
+<div class="publication-card scroll-reveal">
+    <h3 class="publication-title">
+        <a href="https://doi.org/10.1007/978-981-96-7511-1_19" 
            target="_blank" 
            rel="noopener noreferrer">
-            View Publication →
-        </a>
-    </div>
-
-    <div class="publication-card scroll-reveal">
-        <h3 class="publication-title">
             IoT-Enabled Waste Bin Monitoring Using Raspberry Pi and Cloud-Based Analytics
-        </h3>
-        <div class="publication-date">December 2024</div>
-        <p class="publication-description">
-            Presented at an international conference on smart communication systems,
-            analyzing spectral feature engineering and classifier performance for
-            non-invasive soil moisture estimation.
-        </p>
-        <a class="publication-link" 
-           href="https://doi.org/10.1007/978-981-96-7511-1_19" 
+        </a>
+    </h3>
+    <div class="publication-date">December 2024</div>
+    <p class="publication-description">
+        Presented at an international conference on smart communication systems,
+        analyzing spectral feature engineering and classifier performance for
+        non-invasive soil moisture estimation.
+    </p>
+</div><div class="publication-card scroll-reveal">
+    <h3 class="publication-title">
+        <a href="https://doi.org/10.1007/978-981-97-8602-2_32" 
            target="_blank" 
            rel="noopener noreferrer">
-            View Publication →
+            Real-Time Object Detection and Recognition on Jetson Nano
         </a>
-    </div>
+    </h3>
+    <div class="publication-date">March 2025</div>
+    <p class="publication-description">
+        Implementation of GPU-accelerated YOLOv8 models achieving 97% detection confidence
+        for smart home and surveillance applications with accessibility features.
+    </p>
+</div>
 
+<div class="publication-card scroll-reveal">
+    <h3 class="publication-title">
+        <a href="https://doi.org/10.1007/978-981-96-7511-1_19" 
+           target="_blank" 
+           rel="noopener noreferrer">
+            IoT-Enabled Waste Bin Monitoring Using Raspberry Pi and Cloud-Based Analytics
+        </a>
+    </h3>
+    <div class="publication-date">December 2024</div>
+    <p class="publication-description">
+        Presented at an international conference on smart communication systems,
+        analyzing spectral feature engineering and classifier performance for
+        non-invasive soil moisture estimation.
+    </p>
+</div>
+    </section>
 </div>
 
 
