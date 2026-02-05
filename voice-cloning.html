@@ -1,0 +1,44 @@
+<section class="container">
+  <h1>Design Decisions: Real-Time Voice Cloning</h1>
+
+  <h3>Problem Statement</h3>
+  <p>
+    Build a real-time voice cloning system capable of producing high-fidelity
+    speech from less than 5 seconds of reference audio while maintaining
+    low inference latency on local CPU hardware.
+  </p>
+
+  <h3>Key Constraints</h3>
+  <ul>
+    <li>Limited reference audio (&lt; 5 seconds)</li>
+    <li>Low-latency requirement (&lt; 200ms)</li>
+    <li>No reliance on cloud GPUs</li>
+  </ul>
+
+  <h3>Architecture Choice</h3>
+  <p>
+    I selected an encoder–synthesizer–vocoder architecture to decouple
+    speaker representation from speech generation, allowing flexible
+    speaker adaptation and faster inference.
+  </p>
+
+  <h3>Optimization Decisions</h3>
+  <ul>
+    <li>Converted PyTorch models to ONNX for faster inference</li>
+    <li>Reduced model depth to balance quality and latency</li>
+    <li>Optimized audio preprocessing using Librosa</li>
+  </ul>
+
+  <h3>Results</h3>
+  <ul>
+    <li>95%+ voice similarity</li>
+    <li>~200ms end-to-end latency</li>
+    <li>3× faster CPU inference compared to baseline</li>
+  </ul>
+
+  <h3>Key Learnings</h3>
+  <p>
+    This project strengthened my understanding of model tradeoffs,
+    deployment constraints, and performance-driven ML system design.
+  </p>
+</section>
