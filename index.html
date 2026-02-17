@@ -776,23 +776,34 @@
                 <div class="section-tag">Featured Work</div>
                 <h2 class="section-title">Projects</h2>
             </div>
+            
+            <!-- Project Category Tabs -->
+            <div class="project-tabs" style="display: flex; gap: 1rem; margin-bottom: 3rem; justify-content: center; flex-wrap: wrap;">
+                <button class="tab-btn active" onclick="filterProjects('all')" style="padding: 0.8rem 1.5rem; background: var(--color-primary); color: var(--color-bg); border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s;">All Projects</button>
+                <button class="tab-btn" onclick="filterProjects('aiml')" style="padding: 0.8rem 1.5rem; background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s;">AI/ML</button>
+                <button class="tab-btn" onclick="filterProjects('datascience')" style="padding: 0.8rem 1.5rem; background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s;">Data Science</button>
+                <button class="tab-btn" onclick="filterProjects('swe')" style="padding: 0.8rem 1.5rem; background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s;">Software Engineering</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card scroll-reveal">
+                <!-- WUFScan - Featured First -->
+                <div class="project-card scroll-reveal" data-category="swe aiml">
                     <div class="project-icon">🕵️</div>
                     <h3 class="project-title">WUFScan: Digital Detective for Data Leak Prevention</h3>
-                    <p class="project-description">Built an intelligent document leak prevention system in 24 hours with 1940s noir detective theme. Combines regex pattern matching (60%) with Google Gemini AI (40%) for comprehensive scanning across 20+ file types, achieving 95%+ accuracy in detecting sensitive data with smart redaction capabilities.</p>
+                    <p class="project-description">Built an intelligent document leak prevention system in 24 hours with 1940s noir detective theme. Combines regex pattern matching (60%) with Google Gemini AI (40%) for comprehensive scanning across 20+ file types, achieving 95%+ accuracy. Features browser extension for real-time protection, Valkey API for high-performance caching, and smart redaction with scan history dashboard.</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">Gemini AI</span>
+                        <span class="tag">Valkey</span>
                         <span class="tag">OpenCV</span>
-                        <span class="tag">OCR</span>
-                        <span class="tag">Security</span>
+                        <span class="tag">Browser Extension</span>
                     </div>
                     <a href="https://github.com/mahek390/WUFScan" target="_blank" class="btn btn-secondary" style="margin-top: 1rem;">View on GitHub →</a>
                 </div>
 
-                <div class="project-card scroll-reveal">
+                <!-- AI/ML Projects -->
+                <div class="project-card scroll-reveal" data-category="aiml">
                     <div class="project-icon">🎙️</div>
                     <h3 class="project-title">Real-Time Voice Cloning</h3>
                     <p class="project-description">Deployed an encoder-synthesizer-vocoder system achieving 95%+ voice similarity from <5s reference audio with 200ms latency and 3× faster local CPU inference.</p>
@@ -802,10 +813,10 @@
                         <span class="tag">ONNX</span>
                         <span class="tag">Audio Processing</span>
                     </div>
-                     <a href="voice-cloning.html" class="btn btn-secondary"> Design Decisions → </a>
+                     <a href="voice-cloning.html" class="btn btn-secondary" style="margin-top: 1rem;"> Design Decisions → </a>
                 </div>
 
-                <div class="project-card scroll-reveal">
+                <div class="project-card scroll-reveal" data-category="aiml">
                     <div class="project-icon">👁️</div>
                     <h3 class="project-title">Object Detection on Jetson Nano</h3>
                     <p class="project-description">Achieved 97% detection confidence with GPU-accelerated YOLOv8 models for real-time object recognition with speech output for visually impaired users.</p>
@@ -817,19 +828,7 @@
                     </div>
                 </div>
 
-                <div class="project-card scroll-reveal">
-                    <div class="project-icon">🗑️</div>
-                    <h3 class="project-title">IoT Waste Management System</h3>
-                    <p class="project-description">Designed intelligent waste bin system with Raspberry Pi and sensor fusion, improving garbage collection efficiency by 30% and fuel economy by 38%.</p>
-                    <div class="project-tags">
-                        <span class="tag">IoT</span>
-                        <span class="tag">Raspberry Pi</span>
-                        <span class="tag">Cloud Analytics</span>
-                        <span class="tag">ThingSpeak</span>
-                    </div>
-                </div>
-
-                <div class="project-card scroll-reveal">
+                <div class="project-card scroll-reveal" data-category="aiml">
                     <div class="project-icon">🧊</div>
                     <h3 class="project-title">SAR Ice Classification</h3>
                     <p class="project-description">Implemented MAGIC-inspired Synthetic Aperture Radar ice classification system achieving 96% accuracy in automated ice-water segmentation.</p>
@@ -841,7 +840,33 @@
                     </div>
                 </div>
 
-                <div class="project-card scroll-reveal">
+                <!-- Data Science Projects -->
+                <div class="project-card scroll-reveal" data-category="datascience">
+                    <div class="project-icon">🌱</div>
+                    <h3 class="project-title">Soil Moisture Detection via Spectrometry</h3>
+                    <p class="project-description">Achieved 99.57% accuracy in soil moisture detection by developing a spectrometry-based machine learning approach using SVM and 1D-CNN. Optimized model performance through feature engineering and parameter tuning.</p>
+                    <div class="project-tags">
+                        <span class="tag">SVM</span>
+                        <span class="tag">1D-CNN</span>
+                        <span class="tag">Spectrometry</span>
+                        <span class="tag">Feature Engineering</span>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal" data-category="datascience">
+                    <div class="project-icon">🗑️</div>
+                    <h3 class="project-title">IoT Waste Management System</h3>
+                    <p class="project-description">Designed intelligent waste bin system with Raspberry Pi and sensor fusion, improving garbage collection efficiency by 30% and fuel economy by 38%.</p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Raspberry Pi</span>
+                        <span class="tag">Cloud Analytics</span>
+                        <span class="tag">ThingSpeak</span>
+                    </div>
+                </div>
+
+                <!-- Software Engineering Projects -->
+                <div class="project-card scroll-reveal" data-category="swe">
                     <div class="project-icon">🌐</div>
                     <h3 class="project-title">Ttravelling Troupe: Travel Planning Platform</h3>
                     <p class="project-description">Developed a travel guide website for Smart India Hackathon using MERN stack with real-time API integration for budget-based recommendations.</p>
@@ -853,7 +878,7 @@
                     </div>
                 </div>
 
-                <div class="project-card scroll-reveal">
+                <div class="project-card scroll-reveal" data-category="swe">
                     <div class="project-icon">📚</div>
                     <h3 class="project-title">SlotBiz: Academic Scheduling Platform</h3>
                         <p class="project-description">
@@ -1076,6 +1101,31 @@
                 }
             });
         });
+
+        // Project filtering
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.tab-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.background = 'var(--color-surface)';
+                btn.style.color = 'var(--color-text)';
+            });
+            
+            event.target.classList.add('active');
+            event.target.style.background = 'var(--color-primary)';
+            event.target.style.color = 'var(--color-bg)';
+            
+            cards.forEach(card => {
+                const categories = card.dataset.category.split(' ');
+                if (category === 'all' || categories.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
